@@ -1,0 +1,155 @@
+<html>
+<head>
+	<title>Test</title>
+<style type="text/css">
+	.parent {
+ border: 2px black dotted;
+ display: inline-block;
+
+}
+.box {
+ display: inline-block;
+ background: red;
+ width: 100px;
+ height: 100px;
+}
+#two {
+  background: green;
+  top: 20px;
+  left: 20px;
+  position: relative;
+}
+</style>
+</head>
+<body>
+
+<div class="parent">
+ <div class="box" id="one">One</div>
+ <div class="box" id="two">Two</div>
+ <div class="box" id="three">Three</div>
+ <div class="box" id="four">Four</div>
+</div>
+<br>
+
+
+	<script type="text/javascript">
+var x = 15 * 5;
+
+document.getElementbyId("demo").innerHTML = x;
+</script>
+	<script type="text/javascript">
+		function n1() {
+			var time= new Date().getHours();	
+			document.getElementById("er").innerHTML=time;
+			// body...
+		}
+	</script>
+<button id="er" type="button" onclick="n1()">Click me</button>
+<!-- <label id="demo"></label>-->
+<img id="image" src="C:\\Users\\nirma\\Downloads\\crown.png" style="width: 100px">
+<script type="text/javascript"></script>
+<button onclick="document.getElementById('image').src='C:\\Users\\nirma\\Downloads\\bookshelf.png'"> image 1</button>
+
+<button onclick="document.getElementById('image').src='C:\\Users\\nirma\\Downloads\\study.png'">image 2</button>
+<button onclick="document.getElementById('image').src='C:\\Users\\nirma\\Downloads\\crown.png'">clear</button>
+
+<p id="demo1">Unchanged</p>
+
+<script src="day1.js"></script>
+<button type="button" onclick="h1()">Try</button>
+
+---------------------------------
+<p id="nick"></p>
+<script type="text/javascript">
+var str="Nirmal kalthiya from parul university. he is pursuing it from there.";
+document.getElementById("nick").innerHTML=str;
+</script>
+
+	<button onclick="var n=prompt('enter keyword')">Search</button>
+	<script type="text/javascript">
+		var word=str.Search(n)
+		var newword=word.bold();
+		var res=str.replace(word,newword);
+		
+		
+	</script>
+--------------------------------------
+<p id="demon">Visit Microsoft and google. but Microsoft is best!</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  var str = document.getElementById("demon").innerHTML; 
+  var wo=prompt("search");
+  var wonew=wo.bold();
+  var res = str.replace(new RegExp(wo,'gi'), wonew);
+  document.getElementById("demon").innerHTML = res;
+}
+</script>	
+
+------------------------------------------
+<style type="text/css">
+	#count,#ran{
+		width: 100px;
+		height: 50px;
+		background-color: #4CAF50;
+		color: white;
+		font-size: 18;
+	}
+</style>
+<script type="text/javascript">
+	var x=0;
+	function sum() {
+		x++;
+		document.getElementById("count").innerHTML=x; 
+		
+	}
+	document.write("<p>Counter</p><button id='count' onmouseover='sum()'>Counter</button>");
+</script>
+
+<br>
+
+------------------------------------------
+
+<p>Random(0-10)</p><button id="ran" onclick="this.innerHTML=parseInt(Math.random()*11)">Random</button>
+
+<script>
+	"use strict";
+xi = 3.14;
+document.write(xi);
+</script>
+<br>
+-------------------------------------------
+<p id="j"></p>
+<script type="text/javascript">
+var text='{"employee":[{"name":"nirmal","lastname":"kalthiya"},{"name":"kishan","lastname":"makwana"}]}';
+obj= JSON.parse(text);
+document.getElementById("j").innerHTML=obj.employee[0].lastname;
+</script>
+---------------
+<br>
+<script> 
+  
+   function add(a, b , ca){ 
+   document.write(`The sum of ${a} and ${b} is ${a+b}.` +"<br>"); 
+   ca(); 
+   } 
+   
+   // add() function is called with arguments given below 
+   add(5,6,function disp(){ 
+   document.write('This must be printed after addition.'); 
+   }); 
+     
+</script> 
+<br>
+<button onclick="this.style.color='Red'">Click</button>
+
+
+
+
+
+----------------------
+</body>
+</html>
+ 
